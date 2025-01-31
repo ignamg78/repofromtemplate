@@ -1,0 +1,19 @@
+{
+    "java.jdt.ls.java.home": "/usr/local/sdkman/candidates/java/current",
+    "spring-boot.ls.java.home": "/usr/local/sdkman/candidates/java/current",
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "java.format.settings.url": "https://raw.githubusercontent.com/redhat-developer/vscode-java/main/eclipse-java-google-style.xml",
+    "java.format.settings.profile": "GoogleStyle",
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-21",
+            "path": "/usr/local/sdkman/candidates/java/current",
+            "default": true
+        }
+    ],
+    "java.jdt.ls.lombokSupport.enabled": true,    
+    "java.jdt.ls.vmargs": "-javaagent:/workspaces/.lombok/lombok.jar",
+    "editor.formatOnSave": true,
+    "files.autoSave": "afterDelay",
+    "java.compile.nullAnalysis.mode": "automatic"
+}

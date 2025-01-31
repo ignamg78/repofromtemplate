@@ -1,0 +1,54 @@
+{
+  "name": "Java",
+  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+  "image": "mcr.microsoft.com/devcontainers/java:0-17",
+
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "21",
+      "installMaven": "true",
+      "installGradle": "false"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "java.jdt.ls.java.home": "/usr/local/sdkman/candidates/java/current",
+        "spring-boot.ls.java.home": "/usr/local/sdkman/candidates/java/current",
+        "java.configuration.updateBuildConfiguration": "interactive",
+        "java.format.settings.url": "https://raw.githubusercontent.com/redhat-developer/vscode-java/main/eclipse-java-google-style.xml",
+        "java.format.settings.profile": "GoogleStyle",
+		"java.configuration.runtimes": [
+				{
+					"name": "JavaSE-21",
+					"path": "/usr/local/sdkman/candidates/java/current",
+					"default": true
+				}
+			],
+		"java.jdt.ls.lombokSupport.enabled": true,
+		"java.jdt.ls.vmargs": "-javaagent:/workspaces/.lombok/lombok.jar",		
+        "editor.formatOnSave": true,
+        "files.autoSave": "afterDelay",
+        "files.exclude": {
+          "target": true
+        }
+      },
+      "extensions": [
+        "42crunch.vscode-openapi",		
+		"github.copilot",
+		"github.copilot-chat",
+		"github.vscode-github-actions",
+		"ms-vscode.live-server",		
+		"redhat.vscode-yaml",
+		"ryanluker.vscode-coverage-gutters",
+		"visualstudioexptteam.intellicode-api-usage-examples",		
+		"vscjava.vscode-spring-boot-dashboard",
+		"pivotal.vscode-spring-boot",
+		"vmware.vscode-boot-dev-pack",		
+		"vscjava.vscode-java-pack"
+      ]
+    }
+  },
+  "postCreateCommand": "mkdir -p /workspaces/.lombok && curl -L https://projectlombok.org/downloads/lombok.jar -o /workspaces/.lombok/lombok.jar && mvn -B dependency:resolve",
+  "remoteUser": "vscode"
+}
