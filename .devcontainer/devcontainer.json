@@ -34,7 +34,7 @@
         }
       },
       "extensions": [
-        "42crunch.vscode-openapi",		
+        	"42crunch.vscode-openapi",		
 		"github.copilot",
 		"github.copilot-chat",
 		"github.vscode-github-actions",
@@ -45,7 +45,8 @@
 		"vscjava.vscode-spring-boot-dashboard",
 		"pivotal.vscode-spring-boot",
 		"vmware.vscode-boot-dev-pack",		
-		"vscjava.vscode-java-pack"
+		"vscjava.vscode-java-pack",
+		"vscode-icons-team.vscode-icons"
       ]
     }
   },
